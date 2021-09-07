@@ -1,0 +1,149 @@
+@import "../styles/global-styles.scss";
+
+//Navigation//
+
+.navigation-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10vw;
+  padding: 3vw 0 0 0;
+  color: red;
+}
+
+.navigation-link {
+  text-transform: uppercase;
+  font-family: $brand-font-nav;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: $ease-transition;
+
+  &:hover {
+    opacity: 0.5;
+    transition: $ease-transition;
+  }
+}
+
+.navigation-logo {
+  width: 8vw;
+}
+
+//Mobile Navigation//
+
+.mobile-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10vw;
+  padding: 5vw 0 0 0;
+  display: none;
+}
+
+.mobile-navigation-wrapper {
+  display: flex;
+  width: 65vw;
+  justify-content: flex-end;
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.mobile-navigation-banner {
+  background-color: $brand-color-main;
+  width: 100%;
+}
+
+.mobile-navigation-links {
+  background-color: #fff;
+  width: 100%;
+}
+
+.mobile-navigation-link-container {
+  display: flex;
+  flex-flow: column;
+  padding: 15vh 5vw;
+}
+
+.mobile-navigation-link {
+  text-transform: uppercase;
+  font-family: $brand-font-nav;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.14em;
+  padding: 1vh 0;
+  color: $brand-color-secondary-light;
+  transition: $ease-transition;
+
+  &:hover {
+    opacity: 0.5;
+    transition: $ease-transition;
+  }
+}
+
+.close-button {
+  position: absolute;
+  padding: 2vw 3vw 0 0;
+}
+
+.mobile-navigation-logo {
+  width: 12vw;
+}
+
+//Logic//
+
+.closed {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -99;
+  transition: all 0.3s ease;
+}
+
+.open {
+  visibility: initial;
+  opacity: 1;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+
+.white-navigation {
+  color: #fff;
+}
+
+.color-navigation {
+  color: $brand-color-secondary-light;
+}
+
+//Media Queries//
+//Tablet//
+@media only screen and (max-width: 1025px) {
+  .mobile-navigation-container {
+    display: flex;
+  }
+  .navigation-link-container {
+    display: none;
+  }
+}
+
+//Mobile//
+@media only screen and (max-width: 765px) {
+  .mobile-navigation-wrapper {
+    width: 100vw;
+  }
+
+  .mobile-navigation-banner {
+    display: none;
+  }
+
+  .mobile-navigation-link-container {
+    display: flex;
+    flex-flow: column;
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+}

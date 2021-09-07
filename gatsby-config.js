@@ -2,10 +2,11 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Blog Demo",
+    title: "YESInspired Events",
   },
   plugins: [
     'gatsby-plugin-postcss',
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-source-datocms",
       options: {
