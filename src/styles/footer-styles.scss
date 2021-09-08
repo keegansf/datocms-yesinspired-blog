@@ -1,0 +1,87 @@
+@import url("./global-styles.scss");
+
+.hide {
+  display: block;
+}
+
+.footer {
+  position: relative;
+}
+
+//INSTAGRAM
+.footer-instagram {
+  background-color: rgb(121, 137, 138);
+  min-height: 35vh;
+}
+
+//SOCIALS
+.footer-socials {
+  background-color: rgb(177, 138, 124);
+  min-height: 60vh;
+}
+
+//QUICK LINKS
+.footer-links {
+  background-color: rgb(135, 142, 156);
+  min-height: 55vh;
+  min-width: 30vw;
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+}
+
+//FOOTER BANNER
+.footer-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5vh;
+  margin: 0 15vw;
+}
+
+//TABLET
+
+@media (max-width: 1025px) {
+  .hide {
+    display: none;
+  }
+
+  //QUICK LINKS
+  .footer-links {
+    background-color: rgb(135, 142, 156);
+    min-height: 55vh;
+    min-width: 30vw;
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+  }
+}
+
+//MOBILE
+
+@media (max-width: 768px) {
+  //INSTAGRAM
+  .footer-instagram {
+    min-height: 50vh;
+  }
+
+  //SOCIALS
+  .footer-socials {
+    min-height: 50vh;
+  }
+
+  //QUICK LINKS
+  .footer-links {
+    min-height: 40vh;
+    position: initial;
+  }
+
+  //FOOTER BANNER
+  .footer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5vh;
+    margin: 0 5vw;
+  }
+}
