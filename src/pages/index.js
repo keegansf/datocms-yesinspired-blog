@@ -5,6 +5,8 @@ import colorLogo from "../images/main-logo-color.svg"
 import whiteLogo from "../images/main-logo-white.svg"
 import colorHamburger from "../images/hamburger-menu-color.svg"
 import whiteHamburger from "../images/hamburger-menu-white.svg"
+import CarouselComponent from "../components/carousel-component";
+
 
 
 export default function Index() {
@@ -17,7 +19,11 @@ export default function Index() {
       logoColor={whiteLogo} 
       hamburgerColor={whiteHamburger}/>
      <h1>Moving BG</h1>
-     <div>Hello World</div>
+     <CarouselComponent
+     fade={false}
+     slides={3}>
+    </CarouselComponent>
+
      <Footer />
     </div>
   );
